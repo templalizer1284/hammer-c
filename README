@@ -1,0 +1,5 @@
+Why use new tech? Extend the old.
+
+Hammer-C is literally interpreter of my own invented language that mimics OOP.
+It reads classes, objects and methods and generates structs, function pointers,
+and functions for each and every object defined.
