@@ -3,3 +3,40 @@ Why use new tech? Extend the old.
 Hammer-C is literally interpreter of my own invented language that mimics OOP.
 It reads classes, objects and methods and generates structs, function pointers,
 and functions for each and every object defined.
+
+Example hammer-c template:
+```
+@class Apple
+
+@properties
+	int weight
+	@string name
+@end
+
+@methods
+	void AppleEat void
+@end
+
+@objects
+	McIntosh
+@end
+
+@define AppleEat
+printf("Apple named %s is being eaten.\n", @this name);
+```
+
+After compilation of said code you can include generated Apple.h file in your own code.
+
+```
+#define APPLE_HAMMERC_IMPLEMENTATION
+#include "Apple.h"
+
+int main(void) {
+	Apple McIntosh = AppleConstruct(10, "McIntosh");
+	
+	McItosh.Eat();
+	McItosh.Destroy();
+
+	return 0;
+}
+```
